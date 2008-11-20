@@ -1,0 +1,82 @@
+[
+  {
+    "exampleImageUrl": "http:\/\/turnyournameintoaface.com\/face\/10100311.png",
+    "url": "^http:\/\/turnyournameintoaface.com\/\\?name=([^.\/]+)",
+    "iconPageUrl": "http:\/\/turnyournameintoaface.com\/?name={user_id}",
+    "iconImageElement": "\/\/p[@class=\"image\"]\/img",
+    "exampleUrl": "http:\/\/turnyournameintoaface.com\/?name=ucnv",
+    "service_name": "turnyournameintoaface"
+  },
+  {
+    "exampleImageUrl": "http:\/\/image.jugemkey.jp\/user\/ikenie\/76?service=logpi",
+    "url": "^http:\/\/logpi.jp\/([^\/]+)",
+    "iconPageUrl": "http:\/\/logpi.jp\/{user_id}",
+    "iconImageElement": "\/\/td[@class=\"icon\"]\/a\/img",
+    "exampleUrl": "http:\/\/logpi.jp\/ikeniecom",
+    "service_name": "logpi"
+  },
+  {
+    "exampleImageUrl": "http:\/\/najimi.jp\/image\/usericons\/hysysk_1205956242.png",
+    "url": "^http:\/\/najimi.jp\/([^\/]+)",
+    "iconPageUrl": "http:\/\/najimi.jp\/{user_id}",
+    "iconImageElement": "\/\/div[@id=\\\"navigation\\\"]\/a[1]\/img",
+    "exampleUrl": "http:\/\/najimi.jp\/hysysk",
+    "service_name": "najimi"
+  },
+  {
+    "exampleImageUrl": "http:\/\/www.gravatar.com\/avatar\/7828b45f8396aa361d85cead01fd99ca?s=50&d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-50.png",
+    "url": "^http:\/\/github\\.com\/([^\/]+)",
+    "iconPageUrl": "http:\/\/github.com\/{user_id}",
+    "iconImageElement": "\/\/div[@class=\"identity\"]\/img",
+    "exampleUrl": "http:\/\/github.com\/kzys",
+    "service_name": "github"
+  },
+  {
+    "exampleImageUrl": "http:\/\/farm1.static.flickr.com\/128\/buddyicons\/39255132@N00.jpg?1169585056#39255132@N00",
+    "url": "^http:\/\/www\\.flickr\\.com\/people\/([^\/]+)\/",
+    "iconPageUrl": "http:\/\/www.flickr.com\/people\/{user_id}\/",
+    "iconImageElement": "\/\/td[@class=\"Buddy\"]\/a\/img",
+    "exampleUrl": "http:\/\/www.flickr.com\/people\/kusaker\/",
+    "service_name": "flickr"
+  },
+  {
+    "exampleImageUrl": "http:\/\/userserve-ak.last.fm\/serve\/126\/936583.jpg",
+    "url": "^http:\/\/www\\.lastfm\\.jp\/user\/([^\/]+)",
+    "iconPageUrl": "http:\/\/www.lastfm.jp\/user\/{user_id}",
+    "iconImageElement": "\/\/span[@class=\"userImage\"]\/img",
+    "exampleUrl": "http:\/\/www.lastfm.jp\/user\/youpy",
+    "service_name": "lastfm"
+  },
+  {
+    "exampleImageUrl": "http:\/\/image.nowa.jp\/icon\/00000011c1be13a9decc002ed6f1505814cae91870a1759-o.jpg",
+    "url": "http:\/\/([^.\/]+)\\.nowa\\.jp\/profile\/",
+    "iconPageUrl": "http:\/\/{user_id}.nowa.jp\/profile\/",
+    "iconImageElement": "\/\/div[@class=\"basic-information\"]\/img",
+    "exampleUrl": "http:\/\/yuiseki.nowa.jp\/profile\/",
+    "service_name": "nowa"
+  },
+  {
+    "exampleImageUrl": "http:\/\/www.hatena.ne.jp\/users\/sw\/swdyh\/profile.gif",
+    "url": "^http:\/\/[^.]+\\.hatena.ne\\.jp\/([^.\/]+)",
+    "iconPageUrl": "http:\/\/www.hatena.ne.jp\/{user_id}\/",
+    "iconImageElement": "\/\/img[@class=\"profile-image\"]",
+    "exampleUrl": "http:\/\/www.hatena.ne.jp\/swdyh\/",
+    "service_name": "hatena"
+  },
+  {
+    "exampleImageUrl": "http:\/\/wassr.jp\/user\/kotoriko\/profile_img.png.128.1212746583",
+    "url": "^http:\/\/wassr\\.jp\/user\/([^\/]+)",
+    "iconPageUrl": "http:\/\/wassr.jp\/user\/{user_id}",
+    "iconImageElement": "\/\/div[@class=\"image\"]\/a\/img",
+    "exampleUrl": "http:\/\/wassr.jp\/user\/kotoriko",
+    "service_name": "wassr"
+  },
+  {
+    "exampleImageUrl": "http:\/\/s3.amazonaws.com\/twitter_production\/profile_images\/51990802\/IMAG8174_bigger.JPG",
+    "url": "^http:\/\/twitter\\.com\/([^\/]+)",
+    "iconPageUrl": "http:\/\/twitter.com\/{user_id}",
+    "iconImageElement": "\/\/img[@id=\"profile-image\"]",
+    "exampleUrl": "http:\/\/twitter.com\/swdyh",
+    "service_name": "twitter"
+  }
+]

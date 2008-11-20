@@ -1,0 +1,33 @@
+body {
+  color: #0099b9;
+  font-size: 150%;
+  padding: 0 15px;
+  margin: 0;
+  font-family: serif;
+}
+a {
+  color: #0099b9;
+}
+a:visited {
+  color: #22aada;
+}
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 300%;
+  letter-spacing: -5px;
+  font-weight: normal;
+}
+h2 {
+  margin-bottom: 0;
+}
+ul {
+  margin: 0;
+  list-style: none;
+}
+li {
+  padding: 0;
+}
+.service_url {
+  font-size: 70%;
+}
