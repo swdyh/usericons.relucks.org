@@ -96,6 +96,11 @@ __END__
     <li><a href="http://userscripts.org/scripts/show/36109">twitter faceiconize – Userscripts.org</a><li>
     <li><a href="http://userscripts.org/scripts/show/35359">LDR - twittericon – Userscripts.org</a></li>
   </ul>
-  <p>powered by <a href="http://github.com/swdyh/avaticon">avaticon</a></p>
+  <h2>Source Code</h2>
+  <p><a href="http://github.com/swdyh/usericons.relucks.org/tree/master">swdyh's usericons.relucks.org at master — GitHub</a></p>
+
+
+  <div><a href='http://www.pledgie.com/campaigns/2101'><img alt='Click here to lend your support to: usericons.relucks.org and make a donation at www.pledgie.com !' src='http://www.pledgie.com/campaigns/2101.png?skin_name=chrome' border='0' /></a></div>
+
 </body>
 </html>
