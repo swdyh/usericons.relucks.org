@@ -66,8 +66,9 @@ __END__
 @@ index
 <html>
 <head>
-<title>usericons.relucks.org</title>
-<link href="usericons.css" media="screen" rel="stylesheet" type="text/css" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>usericons.relucks.org</title>
+  <link href="usericons.css" media="screen" rel="stylesheet" type="text/css" />
 </head>
 <body>
   <h1>UserIcons</h1>
@@ -86,6 +87,7 @@ __END__
     <dd class="service_url"><%= URL %><%=h i['service_name'] %>/{user_id}</dd>
   <% end %>
   </dl>
+
   <h2>Applications</h2>
   <ul>
     <li><a href="http://userscripts.org/scripts/show/37064">usericonize favotter – Userscripts.org</a></li>
@@ -96,11 +98,11 @@ __END__
     <li><a href="http://userscripts.org/scripts/show/36109">twitter faceiconize – Userscripts.org</a><li>
     <li><a href="http://userscripts.org/scripts/show/35359">LDR - twittericon – Userscripts.org</a></li>
   </ul>
+
   <h2>Source Code</h2>
   <p><a href="http://github.com/swdyh/usericons.relucks.org/tree/master">swdyh's usericons.relucks.org at master — GitHub</a></p>
 
-
+  <h2>Donate Now</h2>
   <div><a href='http://www.pledgie.com/campaigns/2101'><img alt='Click here to lend your support to: usericons.relucks.org and make a donation at www.pledgie.com !' src='http://www.pledgie.com/campaigns/2101.png?skin_name=chrome' border='0' /></a></div>
-
 </body>
 </html>
