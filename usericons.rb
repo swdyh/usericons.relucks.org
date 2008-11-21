@@ -64,6 +64,7 @@ use_in_file_templates!
 __END__
 
 @@ index
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -95,7 +96,7 @@ __END__
     <li><a href="http://twittstar.com/">TwittStar*</a></li>
     <li><a href="http://june29.jp/2008/11/03/show-twitter-user-icon-on-limechat/">LimeChatにTwitterのアイコンを表示させてみる - 準二級.jp</a></li>
     <li><a href="http://gellbates.com/">gellbates.com | Let's mimic other twitter-ers!</a></li>
-    <li><a href="http://userscripts.org/scripts/show/36109">twitter faceiconize – Userscripts.org</a><li>
+    <li><a href="http://userscripts.org/scripts/show/36109">twitter faceiconize – Userscripts.org</a></li>
     <li><a href="http://userscripts.org/scripts/show/35359">LDR - twittericon – Userscripts.org</a></li>
   </ul>
 
