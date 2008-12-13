@@ -12,6 +12,7 @@ end
 URL = 'http://usericons.relucks.org/'
 CACHE_DIR = 'tmp'
 CACHE_EXPIRE = 60 * 60 * 3
+HTTP_CACHE_EXPIRE = 60 * 60 * 3
 
 get '/' do
   avt = Avaticon.new
@@ -47,16 +48,22 @@ get '/:service/:user_id' do
 
   path = File.join(CACHE_DIR, encode64url("#{service}_#{user_id}"))
   if File.exist?(path) && File.mtime(path) > (Time.now - CACHE_EXPIRE)
+    set_cache
     redirect IO.read(path).strip
   end
 
   begin
     icon_url = avt.get_icon service, user_id
     open(path, 'w') { |f| f.puts icon_url }
+    set_cache
     redirect icon_url
   rescue Exception => e
     throw :halt, [500, 'server error.']
   end
+end
+
+def set_cache
+  headers 'Cache-Control' => "private, max-age=#{HTTP_CACHE_EXPIRE}"
 end
 
 use_in_file_templates!
