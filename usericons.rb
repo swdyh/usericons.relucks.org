@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 require 'rubygems'
 require 'sinatra'
 require 'avaticon'
@@ -6,13 +7,13 @@ require 'erb'
 include ERB::Util
 
 def encode64url arg
-  [arg].pack('m').tr('+/', '-_')
+  [arg].pack('m').tr('+/', '-_').strip
 end
 
 URL = 'http://usericons.relucks.org/'
 CACHE_DIR = 'tmp'
-CACHE_EXPIRE = 60 * 60 * 3
-HTTP_CACHE_EXPIRE = 60 * 60 * 3
+CACHE_EXPIRE = 60 * 60 * 24
+HTTP_CACHE_EXPIRE = 60 * 60 * 24
 
 get '/' do
   avt = Avaticon.new
@@ -36,7 +37,8 @@ get '/' do
 end
 
 get '/:service/:user_id' do
-  avt = Avaticon.new
+  tw_auth = YAML.load_file 'tw.yaml'
+  avt = Avaticon.new :tw_id => tw_auth['id'], :tw_pw => tw_auth['pw']
   avt.load_siteinfo File.join(CACHE_DIR, 'siteinfo.json')
 
   service = params[:service]
@@ -54,6 +56,7 @@ get '/:service/:user_id' do
 
   begin
     icon_url = avt.get_icon service, user_id
+    raise 'error' unless icon_url
     open(path, 'w') { |f| f.puts icon_url }
     set_cache
     redirect icon_url
