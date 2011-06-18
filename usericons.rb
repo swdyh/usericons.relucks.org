@@ -105,21 +105,8 @@ __END__
   <% end %>
   </dl>
 
-  <h2>Applications</h2>
-  <ul>
-    <li><a href="http://userscripts.org/scripts/show/37064">usericonize favotter – Userscripts.org</a></li>
-    <li><a href="http://statter.hoge.in/">すたったー / statter ::</a></li>
-    <li><a href="http://twittstar.com/">TwittStar*</a></li>
-    <li><a href="http://june29.jp/2008/11/03/show-twitter-user-icon-on-limechat/">LimeChatにTwitterのアイコンを表示させてみる - 準二級.jp</a></li>
-    <li><a href="http://gellbates.com/">gellbates.com | Let's mimic other twitter-ers!</a></li>
-    <li><a href="http://userscripts.org/scripts/show/36109">twitter faceiconize – Userscripts.org</a></li>
-    <li><a href="http://userscripts.org/scripts/show/35359">LDR - twittericon – Userscripts.org</a></li>
-  </ul>
-
-  <h2>Source Code</h2>
-  <p><a href="http://github.com/swdyh/usericons.relucks.org/tree/master">swdyh's usericons.relucks.org at master — GitHub</a></p>
-
-  <h2>Donate Now</h2>
-  <div><a href='http://www.pledgie.com/campaigns/2101'><img alt='Click here to lend your support to: usericons.relucks.org and make a donation at www.pledgie.com !' src='http://www.pledgie.com/campaigns/2101.png?skin_name=chrome' border='0' /></a></div>
+  <div class="powered">
+    powered by <a href="http://www.dotcloud.com">www.dotcloud.com</a>
+  </div>
 </body>
 </html>
