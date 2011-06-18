@@ -1,1 +1,2 @@
 15 * * * * ~/current/rm_old_sh
+05 4 * * * ~/current/update.rb > /dev/null 2>&1
