@@ -1,9 +1,10 @@
 body {
   color: #0099b9;
-  font-size: 150%;
+  font-size: 120%;
   padding: 0 15px;
   margin: 0;
   font-family: serif;
+  padding-bottom: 40px;
 }
 a {
   color: #0099b9;
@@ -30,4 +31,10 @@ li {
 }
 .service_url {
   font-size: 70%;
+}
+.powered {
+  font-size: 70%;
+}
+.powered a, .powered a:visited {
+    color: #337;
 }
