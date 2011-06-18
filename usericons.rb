@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
+
+require 'fileutils'
+require 'erb'
 require 'rubygems'
 require 'sinatra'
 require 'avaticon'
-require 'erb'
 
 include ERB::Util
 
@@ -10,14 +12,18 @@ def encode64url arg
   [arg].pack('m').tr('+/', '-_').strip
 end
 
-URL = 'http://usericons.relucks.org/'
-CACHE_DIR = 'tmp'
+CACHE_DIR = 'tmp/icons'
 CACHE_EXPIRE = 60 * 60 * 24
 HTTP_CACHE_EXPIRE = 60 * 60 * 24
 
+unless File.exists?(CACHE_DIR)
+  FileUtils.mkdir_p CACHE_DIR
+end
+
 get '/' do
+  base_url = [request.scheme,  '://', request.host, request.port == 80 ? '' : ':' + request.port.to_s, '/'].join('')
   avt = Avaticon.new
-  avt.load_siteinfo File.join(CACHE_DIR, 'siteinfo.json')
+  avt.load_siteinfo File.join('tmp', 'siteinfo.json')
   if params.key? 'url'
     begin
       url = params['url']
@@ -32,14 +38,13 @@ get '/' do
       throw :halt, [500, 'server error.']
     end
   else
-    erb :index, :locals => { :avt => avt }
+    erb :index, :locals => { :avt => avt, :base_url => base_url }
   end
 end
 
 get '/:service/:user_id' do
-  tw_auth = YAML.load_file 'tw.yaml'
-  avt = Avaticon.new :tw_id => tw_auth['id'], :tw_pw => tw_auth['pw']
-  avt.load_siteinfo File.join(CACHE_DIR, 'siteinfo.json')
+  avt = Avaticon.new
+  avt.load_siteinfo File.join('tmp', 'siteinfo.json')
 
   service = params[:service]
   user_id = params[:user_id]
@@ -69,7 +74,7 @@ def set_cache
   headers 'Cache-Control' => "private, max-age=#{HTTP_CACHE_EXPIRE}"
 end
 
-use_in_file_templates!
+# use_in_file_templates!
 
 __END__
 
@@ -85,18 +90,18 @@ __END__
 <body>
   <h1>UserIcons</h1>
   <h2>API</h2>
-  <div><%= URL %>{service}/{user_id}</div>
-  <div><%= URL %>?url={url}</div>
+  <div><%=h base_url %>{service}/{user_id}</div>
+  <div><%=h base_url %>?url={url}</div>
 
   <h2>Examples</h2>
-  <div><%= URL %>twitter/swdyh</div>
-  <div><%= URL %>?url=http://twitter.com/swdyh</div>
+  <div><%=h base_url %>twitter/swdyh</div>
+  <div><%=h base_url %>?url=http://twitter.com/swdyh</div>
 
   <h2>Available Services</h2>
   <dl>
   <% avt.siteinfo.sort_by{|i| i['service_name'] }.each do |i| %>
     <dt class="service_name"><%=h i['service_name'] %></dt>
-    <dd class="service_url"><%= URL %><%=h i['service_name'] %>/{user_id}</dd>
+    <dd class="service_url"><%=h base_url %><%=h i['service_name'] %>/{user_id}</dd>
   <% end %>
   </dl>
 
